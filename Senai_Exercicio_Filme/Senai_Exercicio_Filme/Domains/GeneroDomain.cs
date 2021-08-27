@@ -7,7 +7,7 @@ namespace Senai_Exercicio_Filme.Domains
 {
     public class GeneroDomain
     {
-        public int IDGenero { get; set; }
-        public string NomeGenero { get; set; }
+        public int idGenero { get; set; }
+        public string nomeGenero { get; set; }
     }
 }

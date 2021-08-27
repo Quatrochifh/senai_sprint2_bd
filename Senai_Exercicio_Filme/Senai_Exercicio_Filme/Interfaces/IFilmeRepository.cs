@@ -10,14 +10,14 @@ namespace Senai_Exercicio_Filme.Interfaces
     {
         List<FilmeDomain> ListarTodos();
 
-        FilmeDomain BuscarPorId(int IDFilme);
+        FilmeDomain BuscarPorId(int idFilme);
 
-        void Cadastrar(FilmeDomain NovoFilme);
+        void Cadastrar(FilmeDomain novoFilme);
 
         void AtualizarIdCorpo(FilmeDomain FilmeAtualizadoCorpo);
 
-        void AtualizarIdUrl(int IDFilme, FilmeDomain filmeAtualizadoURL);
+        void AtualizarIdUrl(int idFilme, FilmeDomain filmeAtualizadoURL);
 
-        void Deletar(int IDFilme);
+        void Deletar(int idFilme);
     }
 }
