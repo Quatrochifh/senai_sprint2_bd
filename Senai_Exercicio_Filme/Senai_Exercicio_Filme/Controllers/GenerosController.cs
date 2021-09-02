@@ -39,5 +39,35 @@ namespace Senai_Exercicio_Filme.Controllers
              return Ok(listaGenero);
         }
 
+
+        /// <summary>
+        /// Cadastra um novo gênero
+        /// </summary>
+        /// <returns>Um status code 201 - Created</returns>
+        [HttpPost]
+        public IActionResult Post(GeneroDomain NovoGenero)
+        {
+            _GeneroRepository.Cadastrar(NovoGenero);
+
+            return StatusCode(201);
+        }
+
+
+        /// <summary>
+        /// Deleta um gênero existente
+        /// </summary>
+        /// <param name="id">id do gênero que será deletado</param>
+        /// <returns>Um status code 204 - No Content</returns>
+        /// ex: http://localhost:5000/api/generos/excluir/9
+        [HttpDelete("excluir/{id}")]
+        public IActionResult Delete(int id)
+        {
+            // Faz a chamada para o método .Deletar()
+            _GeneroRepository.Deletar(id);
+
+            // Retorna um status code 204 - No Content
+            return NoContent();
+        }
+
     }
 }
